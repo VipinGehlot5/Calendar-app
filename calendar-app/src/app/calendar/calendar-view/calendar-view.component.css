@@ -1,0 +1,57 @@
+.calendar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.calendar {
+    /* display: grid; */
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.card-container {
+    display: flex;
+    gap: 20px;
+}
+
+.date {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    width: 60vh;
+}
+
+.appointment {
+    margin-top: 5px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #e3f2fd;
+    display: flex;
+    justify-content: space-between;
+}
+
+.delete-area {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: rgb(130, 229, 213);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    width: 200px;
+}
+
+.delete-area mat-icon {
+    margin-right: 5px;
+    color: red;
+}

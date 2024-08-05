@@ -1,0 +1,19 @@
+<div class="calendar-container">
+    <app-appointment-form (newAppointment)="addAppointment($event)"></app-appointment-form>
+    <div class="card-container">
+        <div class="calendar" cdkDropListGroup>
+            <div *ngFor="let day of days" class="date" cdkDropList (cdkDropListDropped)="drop($event)"
+                [cdkDropListData]="day.appointments">
+                <div>{{ day.date | date: 'fullDate' }}</div>
+                <div *ngFor="let appointment of day.appointments" class="appointment" cdkDrag>
+                    {{ appointment.description }}
+                    <button (click)="deleteAppointment(day, appointment)">Delete</button>
+
+                </div>
+            </div>
+        </div>
+        <div class="delete-area" cdkDropList (cdkDropListDropped)="drop($event)" id="delete-area" #deleteArea>
+            Drag and Drop items to add task on different date
+        </div>
+    </div>
+</div>
